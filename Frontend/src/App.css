@@ -1,0 +1,25 @@
+/* Containers */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.containers {
+  max-width: 1439px;
+  padding: 1.5rem; 
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) { /* For md screens */
+  .containers {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) { /* For sm screens */
+  .containers {
+    padding: 0.8rem;
+  }
+}
