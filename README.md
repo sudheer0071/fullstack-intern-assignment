@@ -2,6 +2,9 @@
 
 Live: https://assignment.sudheer.tech
 
+## Demo Video
+https://github.com/user-attachments/assets/75e886d5-75c9-449b-8322-c35f2890f800
+
 ## To Run the app Locally
 ### Backend:
 #### Open the file and Install dependencies
@@ -9,6 +12,8 @@ Live: https://assignment.sudheer.tech
 cd ./backend
 pip install -r requirement.txt
 ```
+
+
 
 
 #### Run the app
