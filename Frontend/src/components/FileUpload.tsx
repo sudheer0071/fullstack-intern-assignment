@@ -43,7 +43,7 @@ export function FileUpload(){
 
   return ( 
       <div className=" flex gap-5 md:gap-10 lg:gap-10 items-center">
-        <Toaster position="top-right" richColors />
+        <Toaster position="top-center" richColors />
        {uploaded  && <div className=" flex gap-2 md:gap-3 lg:gap-3 items-center">
           <File strokeWidth={1.2} className=" size-[24px]  md:size-[37px] lg:size-[37px] inline-block text-[#0FA958] border p-[6px] rounded-md border-[#0FA958]"/> 
           <p className="text-[#0FA958] font-semibold text-[14px] sm:text-sm md:text-base lg:text-base"> {fileName}  </p>

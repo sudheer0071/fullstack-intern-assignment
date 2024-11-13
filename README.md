@@ -1,2 +1,1 @@
-# fullstack-assignment
-# fullstack-intern-assignment
+# AI Planet Fullstack Intern Assignment

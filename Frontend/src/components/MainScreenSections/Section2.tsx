@@ -77,7 +77,7 @@ export const Section2 = () => {
         <div className=" lg:px-10 ">
           <div>
             <div className=" flex-1 overflow-hidden text-slate-600 md:px-6 lg:px-10 mt-20 md:mt-40 lg:mt-40 pb-32 w-full">
-              <Toaster position="top-right" richColors />
+              <Toaster position="top-center" richColors />
               {<div id="pdf-content" ref={ref} className=" " >
                 <div id="messages" className=" ">
 
@@ -173,9 +173,9 @@ export const Section2 = () => {
               </div>}
             </div>
           </div>
-        </div>
-
-        <div className=" fixed bottom-0 pb-5 md:pb-10 lg:pb-14 px-4 md:px-20 lg:px-24 bg-white w-full">
+        </div> 
+        <div className=" flex justify-center">
+        <div className=" fixed bottom-0 pb-5 md:pb-10 lg:pb-14 px-4 md:px-20 lg:px-24 bg-white w-full max-w-[1500px]  ">
           <div>
             <div className="flex items-center border-2 shadow-md rounded-lg py-4 px-8">
               <input
@@ -195,6 +195,7 @@ export const Section2 = () => {
               </button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
