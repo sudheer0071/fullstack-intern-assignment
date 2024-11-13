@@ -1,2 +1,2 @@
-export const BACKEND_URL="http://127.0.0.1:8000"
+export const BACKEND_URL="https://assignment1.sudheer.tech"
 export const BOTIMG = "https://s3-alpha-sig.figma.com/img/5274/3efd/da66b589899da7047ac6fe05c0f1371f?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bjDRk-7QzV74MP5vNbNMlT5eAEePr7RD1Zvd1ibTL0O1FJa-wZ35XaBR5vXF2Su~iPEPK9XWNoOHOVvFylsM48oLD1vooCN11IGJbAwlZT0-vLjCl6yauge-0KDYScRvRSKxYLzjEHC2o6FGLemoisMVFSlZBxvRsiIGV-urmoX7FabeKFp4yWaXvYJK7dSfcgKAZf2ly2YPboBszk7rLfko7yeC3xmtHG4uWrHClx56YKnGw9Gzr1ATbFYCOIYbtjn7CirvZ8nGVRDVEl-Zlei6k74ARa9-D4SIL2M7u7y~TE7hdkrVn1hpR0IzqyLu7iAEKdOZibs6CxpWutf4RA__"

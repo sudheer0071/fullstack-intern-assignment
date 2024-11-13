@@ -2,27 +2,21 @@ import { useCallback, useState } from "react";
 import axios from "axios";
 import {toast, Toaster} from 'sonner'
 import { useDropzone } from 'react-dropzone';  
-import {File} from 'lucide-react'
-// import { useNavigate } from "react-router-dom";  
-// import { UploadIcon } from "lucide-react"; 
-// import { uploadedState } from "../pages/atom";
+import {File} from 'lucide-react' 
 import { BACKEND_URL } from "../utils/config";
 
 
 export function FileUpload(){  
   const[uploaded, setUploaded] = useState<boolean|null>(false)
-  const[fileName, setFileName] = useState<string|null> ('')
-  // const [uploaded, setUploaded] = useRecoilState(uploadedState)
-   
-  // const navigate = useNavigate()
+  const[fileName, setFileName] = useState<string|null> ('') 
 
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     const formData = new FormData();
     formData.append('file', file);
 
+    const toastRes = toast.loading("Uploading PDF..")
     try {  
-      toast.loading("Uploading PDF..")
        
       const response = await axios.post(`${BACKEND_URL}/upload/`, formData, {
         headers: {
@@ -34,11 +28,13 @@ export function FileUpload(){
       
       console.log(response.data.message);
       toast.success(json)
+      toast.dismiss(toastRes)
       setUploaded(true)
       setFileName(file.name)
     } catch (error) {
       console.error('Error uploading file:', error);
       toast.error(`Error in Uploading: ${error}`)
+      toast.dismiss(toastRes)
     }
   }, []);
  
@@ -47,10 +43,10 @@ export function FileUpload(){
 
   return ( 
       <div className=" flex gap-5 md:gap-10 lg:gap-10 items-center">
-        <Toaster richColors />
-       {!uploaded  && <div className=" flex gap-2 md:gap-3 lg:gap-3 items-center">
+        <Toaster position="top-right" richColors />
+       {uploaded  && <div className=" flex gap-2 md:gap-3 lg:gap-3 items-center">
           <File strokeWidth={1.2} className=" size-[24px]  md:size-[37px] lg:size-[37px] inline-block text-[#0FA958] border p-[6px] rounded-md border-[#0FA958]"/> 
-          <p className="text-[#0FA958] font-semibold text-[14px] sm:text-sm md:text-base lg:text-base"> {fileName} sudheer.pdf </p>
+          <p className="text-[#0FA958] font-semibold text-[14px] sm:text-sm md:text-base lg:text-base"> {fileName}  </p>
         </div>}
     <div {...getRootProps()} className=" flex justify-center items-center border-2 border-black rounded-lg w-full py-2 px-2 md:py-2 lg:py-2 md:px-7 lg:px-8 ">
       <div className=" w-fu ll">

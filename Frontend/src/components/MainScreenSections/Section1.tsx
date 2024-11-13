@@ -6,7 +6,9 @@ export const Section1 = ()=>{
  
     <div className=" containers flex justify-between items-center">
     <div className=" flex h-full">
+      <a href="/">
        <img src="AI Planet Logo.png" alt="" className=" w-[80px] md:w-full lg:w-full" />
+      </a>
     </div>
 
     <div className="">
